@@ -60,8 +60,8 @@ if uploaded_file:
         
         # 스타일 이미지가 업로드 됐는지 확인
         if uploaded_st_file:
-            img2 = Image.open(uploaded_st_file)
-            img2.save(style_path, "JPEG")
+            img = Image.open(uploaded_file)
+            img.save(input_path, "JPEG")
             st.image(img2, caption='내가 올린 스타일 이미지', use_column_width=True)
             
             # 학습할 때 사용할 이미지들의 크기 선택
